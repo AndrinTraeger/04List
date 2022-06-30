@@ -8,6 +8,7 @@ import { ShoppingListService } from '../shopping-list.service';
 import {NgForm} from "@angular/forms";
 import {Subscription} from "rxjs";
 
+
 @Component({
   selector: 'app-shopping-edit',
   templateUrl: './shopping-edit.component.html',
@@ -19,6 +20,7 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
   editMode = false;
   editedItemIndex: number;
   editedItem: Ingredient;
+
 
   constructor(private slService: ShoppingListService) {
   }
@@ -62,6 +64,5 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }
-
 
 }
